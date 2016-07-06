@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+<ul class="nav nav-tabs" ng-init="name='home'">
+    <li role="presentation" ng-class="{'active':'home'===name}" ng-click="name='home'"><a href="#">Home</a></li>
+    <li role="presentation" ng-class="{'active':'profile'===name}" ng-click="name='profile'"><a href="#">Profile</a></li>
+    <li role="presentation" ng-class="{'active':'message'===name}" ng-click="name='message'"><a href="#">Messages</a></li>
+</ul>
+
+<script src="angular/angular.js"></script>
+</body>
+</html>

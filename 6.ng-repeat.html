@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body >
+<!--<div ng-init="person={name:'zxpx',age:7,sex:'2'}">-->
+    <!--<div ng-repeat="(k,v) in person">-->
+        <!--{{k}}={{v}}:{{$index+1}}-->
+    <!--</div>-->
+<!--</div>-->
+<div ng-init="phones=[{name:'apple',price:40,type:['白色','金色','玫瑰金']},{name:'huawei',price:30,type:['红色','粉色','紫色']}]">
+    <div ng-repeat="(index,p) in phones">
+        <div ng-repeat="pp in p.type">
+            {{index}}{{$index}} {{pp}}
+        </div>
+    </div>
+    <!--<div ng-repeat="(index,p) in phones">-->
+        <!--<div ng-repeat="(index1,pp) in p">-->
+            <!--{{index}}{{index1}}-->
+            <!--<div ng-repeat="ppp in pp">-->
+                <!--{{$index}}{{ppp}}-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+<div ng-init="phones1=['苹果','苹果','苹果']">
+    <div ng-repeat="p in phones1 track by $index">
+        {{p}}
+    </div>
+</div>
+
+<script src="./angular/angular.js"></script>
+</body>
+</html>

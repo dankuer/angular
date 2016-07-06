@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .block{
+            display:block;
+        }
+        .none{
+            display:none
+        }
+    </style>
+</head>
+<body ng-init="value=true">
+<button ng-click="value=!value">{{value?'隐藏':'显示'}}</button>
+<!--<div class="{{value?'block':'none'}}">content</div>-->
+<!--<div ng-show="value">content</div>-->
+<div ng-if="value">content</div>
+<script src="./angular/angular.js">
+
+</script>
+</body>
+</html>

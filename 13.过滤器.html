@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-init="product=[{name:'苹果',price:400},{name:'华为',price:300}]">
+    <div ng-repeat="p in product">
+        {{p.name}}的价格是：{{p.price | currency:'$'}}
+    </div>
+</div>
+{{'abcdefg'|uppercase}}<br/>
+{{'ADED'|lowercase}}<br/>
+{{1234234543234|limitTo:3}}<br/>
+{{123123.2352|number:2}}
+<pre>
+{{product|json}}
+</pre>
+
+{{1654567898765|date:'yyyy-MM-dd hh:mm:ss'}}
+<script src="angular/angular.js"></script>
+</body>
+</html>
