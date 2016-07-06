@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Filter</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+<div ng-init="flag=true;scores=[{name:'zhufeng1',chinese:90,math:50,english:60},{name:'zhufeng2',chinese:80,math:60,english:40},{name:'zhufeng3',chinese:50,math:40,english:90}]">
+    <input type="text" ng-model="query" ng-model-options="{debounce:2000}"/>
+    <table class="table table-bordered" ng-init="active='chinese'">
+        <tr>
+            <th>名字</th>
+            <th ng-click="active='chinese';flag=!flag">国语</th>
+            <th ng-click="active='math';flag=!flag">数学</th>
+            <th ng-click="active='english';flag=!flag">英语</th>
+        </tr>
+        <tr ng-repeat="s in scores |orderBy:active:flag|filter:{'chinese':query}">
+            <td>{{s.name}}</td>
+            <td>{{s.chinese}}</td>
+            <td>{{s.math}}</td>
+            <td>{{s.english}}</td>
+        </tr>
+    </table>
+</div>
+
+<script src="./angular/angular.js"></script>
+</body>
+</html>
